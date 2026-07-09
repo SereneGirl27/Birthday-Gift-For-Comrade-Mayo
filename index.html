@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday Rishit</title>
+<style>
+html,body{margin:0;height:100%;overflow:hidden;background:linear-gradient(#020615,#091b3f);font-family:Georgia,serif;color:#fff}
+.stage{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+h1{font-size:3rem;margin:.2em;text-shadow:0 0 12px #9fd}
+#msg,#next{opacity:0;transition:1s}
+#next{margin-top:20px;padding:12px 24px;border:1px solid #9cf;background:transparent;color:#fff;border-radius:30px;cursor:pointer}
+.star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d) ease-in-out infinite;opacity:.2}
+@keyframes twinkle{50%{opacity:1;transform:scale(1.4)}}
+.shoot{position:absolute;width:2px;height:2px;background:#fff;box-shadow:0 0 10px #fff;animation:shoot 8s linear infinite}
+@keyframes shoot{0%{transform:translate(-10vw,-10vh)}10%{transform:translate(110vw,60vh)}100%{transform:translate(110vw,60vh);opacity:0}}
+.cake{position:relative;width:220px;height:190px;margin:20px auto}
+.layer{position:absolute;left:20px;width:180px;border-radius:10px;background:#c98b5f}
+.l1{bottom:0;height:55px}.l2{bottom:55px;width:150px;left:35px;height:48px}.l3{bottom:103px;width:120px;left:50px;height:42px}
+.icing{position:absolute;background:#f7f7ff;border-radius:10px}
+.i1{bottom:50px;left:20px;width:180px;height:12px}.i2{bottom:98px;left:35px;width:150px;height:12px}.i3{bottom:145px;left:50px;width:120px;height:12px}
+.candle{position:absolute;left:107px;bottom:157px;width:8px;height:36px;background:#ffd66b;cursor:pointer}
+.flame{position:absolute;left:-4px;top:-16px;width:16px;height:16px;background:gold;border-radius:50% 50% 50% 0;transform:rotate(-45deg);box-shadow:0 0 15px gold;animation:flicker .15s infinite alternate}
+@keyframes flicker{to{transform:rotate(-42deg) scale(1.08)}}
+.smoke{position:absolute;left:-2px;top:-18px;width:10px;height:10px;background:#bbb;border-radius:50%;opacity:0}
+.smoke.go{animation:smoke 1s forwards}
+@keyframes smoke{to{transform:translateY(-30px) scale(2);opacity:0}}
+</style></head><body>
+<div class="stage" id="stage">
+<h1>Happy Birthday<br>Rishit</h1>
+<div class="cake">
+<div class="layer l1"></div><div class="icing i1"></div>
+<div class="layer l2"></div><div class="icing i2"></div>
+<div class="layer l3"></div><div class="icing i3"></div>
+<div class="candle" onclick="blow()"><div class="flame" id="flame"></div><div class="smoke" id="smoke"></div></div>
+</div>
+<p id="msg">🎉 Yayy! You're 18 now! 🎉</p>
+<button id="next" onclick="location.href='letter.html'">Read Your Letter →</button>
+<div class="shoot"></div>
+</div>
+<script>
+for(let i=0;i<140;i++){
+ let s=document.createElement('div');s.className='star';
+ let z=Math.random()*3+1;
+ s.style.width=z+'px';s.style.height=z+'px';
+ s.style.left=Math.random()*100+'vw';s.style.top=Math.random()*100+'vh';
+ s.style.setProperty('--d',(2+Math.random()*4)+'s');
+ document.body.appendChild(s);
+}
+function blow(){
+ let f=document.getElementById('flame');
+ if(!f)return;
+ f.remove();
+ document.getElementById('smoke').classList.add('go');
+ setTimeout(()=>{
+  msg.style.opacity=1;
+  next.style.opacity=1;
+ },900);
+}
+</script></body></html>
