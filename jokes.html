@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Few Terrible Jokes 😂</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Georgia,serif;
+    background:linear-gradient(to bottom,#020817,#071330,#0b1e44);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ---------- Stars ---------- */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle{
+
+0%,100%{
+opacity:.15;
+transform:scale(.8);
+}
+
+50%{
+opacity:1;
+transform:scale(1.8);
+}
+
+}
+
+/* ---------- Main ---------- */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:70px 25px 90px;
+}
+
+h1{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:15px;
+    text-shadow:0 0 18px rgba(255,255,255,.6);
+}
+
+.subtitle{
+    text-align:center;
+    color:#cfd8ff;
+    margin-bottom:55px;
+    font-size:1.08rem;
+    line-height:1.7;
+}
+
+/* ---------- Cards ---------- */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    perspective:1000px;
+}
+
+.flip-card{
+    height:240px;
+    cursor:pointer;
+}
+
+.flip-inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform .8s;
+    transform-style:preserve-3d;
+}
+
+.flip-card.flipped .flip-inner{
+    transform:rotateY(180deg);
+}
+
+.front,
+.back{
+
+position:absolute;
+width:100%;
+height:100%;
+border-radius:20px;
+
+backdrop-filter:blur(12px);
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:0 0 25px rgba(120,170,255,.18);
+
+padding:30px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+backface-visibility:hidden;
+
+transition:.3s;
+
+}
+
+.flip-card:hover .front{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 30px rgba(170,210,255,.4);
+
+}
+
+.back{
+
+transform:rotateY(180deg);
+
+background:rgba(255,255,255,.12);
+
+}
+
+.number{
+
+color:#9bc4ff;
+
+letter-spacing:2px;
+
+margin-bottom:18px;
+
+font-size:.9rem;
+
+}
+
+.question{
+
+font-size:1.25rem;
+
+line-height:1.7;
+
+}
+
+.answer{
+
+font-size:1.45rem;
+
+line-height:1.7;
+
+color:white;
+
+}
+
+.tap{
+
+margin-top:22px;
+
+font-size:.85rem;
+
+color:#cfd8ff;
+
+opacity:.8;
+
+}
+
+.hidden{
+
+opacity:0;
+
+transform:translateY(20px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+.message{
+
+margin-top:70px;
+
+text-align:center;
+
+font-size:1.35rem;
+
+line-height:2;
+
+color:#dbe5ff;
+
+}
+
+.button-wrap{
+
+margin-top:45px;
+
+text-align:center;
+
+}
+
+.button{
+
+display:inline-block;
+
+padding:16px 36px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+color:white;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:0 0 20px rgba(120,170,255,.25);
+
+transition:.35s;
+
+font-size:1.08rem;
+
+}
+
+.button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 35px rgba(170,210,255,.65);
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<h1>Just 4 Very Serious Jokes 😂</h1>
+
+<p class="subtitle">
+These jokes have been scientifically proven to make at least one person laugh.<br>
+Hopefully that person is you.
+</p>
+
+<div class="grid">
+
+<!-- Joke 1 -->
+
+<div class="flip-card">
+
+<div class="flip-inner">
+
+<div class="front">
+
+<div class="number">JOKE 01</div>
+
+<div class="question">
+Why does it take pirates a long time to learn the alphabet?
+</div>
+
+<div class="tap">
+Click to reveal 🏴‍☠️
+</div>
+
+</div>
+
+<div class="back">
+
+<div class="number">ANSWER</div>
+
+<div class="answer">
+Because they can spend years at <b>C!</b> 😂
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Joke 2 -->
+
+<div class="flip-card">
+
+<div class="flip-inner">
+
+<div class="front">
+
+<div class="number">JOKE 02</div>
+
+<div class="question">
+What's the best thing about Switzerland?
+</div>
+
+<div class="tap">
+Click to reveal 🇨🇭
+</div>
+
+</div>
+
+<div class="back">
+
+<div class="number">ANSWER</div>
+
+<div class="answer">
+The flag is a big plus. ➕
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- Joke 3 -->
+
+<div class="flip-card">
+
+<div class="flip-inner">
+
+<div class="front">
+
+<div class="number">JOKE 03</div>
+
+<div class="question">
+Why couldn't the sunflower ride its bike?
+</div>
+
+<div class="tap">
+Click to reveal 🌻
+</div>
+
+</div>
+
+<div class="back">
+
+<div class="number">ANSWER</div>
+
+<div class="answer">
+It lost its petals. 🌼😂
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Joke 4 -->
+
+<div class="flip-card">
+
+<div class="flip-inner">
+
+<div class="front">
+
+<div class="number">JOKE 04</div>
+
+<div class="question">
+What do you call it when a snowman throws a tantrum?
+</div>
+
+<div class="tap">
+Click to reveal ☃️
+</div>
+
+</div>
+
+<div class="back">
+
+<div class="number">ANSWER</div>
+
+<div class="answer">
+A meltdown. ❄️😂
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Hidden Message -->
+
+<div id="message" class="message hidden">
+
+<p>
+🎉 <strong>Congratulations on tolerating my humour.</strong>
+</p>
+
+<p style="margin-top:15px;">
+Your patience is appreciated. 😌
+</p>
+
+</div>
+
+<!-- Hidden Button -->
+
+<div id="buttonWrap" class="button-wrap hidden">
+
+<a href="final.html" class="button">
+❤️ One Final Thing →
+</a>
+
+</div>
+
+</div>
+
+<script>
+  const stars = document.getElementById("stars");
+
+for(let i = 0; i < 180; i++){
+
+    const star = document.createElement("div");
+
+    star.className = "star";
+
+    const size = Math.random() * 3 + 1;
+
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+
+    star.style.animationDuration = (Math.random() * 4 + 2) + "s";
+    star.style.animationDelay = (Math.random() * 5) + "s";
+
+    stars.appendChild(star);
+
+}
+
+const cards = document.querySelectorAll(".flip-card");
+
+const flipped = new Set();
+
+const message = document.getElementById("message");
+const button = document.getElementById("buttonWrap");
+
+cards.forEach((card,index)=>{
+
+    card.addEventListener("click",()=>{
+
+        card.classList.toggle("flipped");
+
+        flipped.add(index);
+
+        if(flipped.size === cards.length){
+
+            setTimeout(()=>{
+
+                message.classList.add("show");
+
+            },1000);
+
+            setTimeout(()=>{
+
+                button.classList.add("show");
+
+            },3000);
+
+        }
+
+    });
+
+});
+</script>
+
+</body>
+</html>
