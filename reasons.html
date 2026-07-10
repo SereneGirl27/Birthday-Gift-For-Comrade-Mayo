@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>18 Reasons Why You're Awesome ✨</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: "Georgia", serif;
+    background:linear-gradient(to bottom,#020817,#071330,#0b1e44);
+    overflow-x:hidden;
+    color:white;
+}
+
+/* Stars */
+
+.stars{
+    position:fixed;
+    inset:0;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle{
+    0%,100%{
+        opacity:.15;
+        transform:scale(.7);
+    }
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+}
+
+/* Content */
+
+.container{
+    max-width:950px;
+    margin:auto;
+    padding:70px 25px 90px;
+}
+
+h1{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:12px;
+    text-shadow:0 0 15px rgba(255,255,255,.6);
+}
+
+.subtitle{
+    text-align:center;
+    color:#cfd8ff;
+    margin-bottom:55px;
+    font-size:1.1rem;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:18px;
+    padding:28px;
+    transition:.35s;
+    box-shadow:0 0 18px rgba(120,170,255,.15);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 30px rgba(170,210,255,.4);
+    border-color:rgba(255,255,255,.35);
+}
+
+.number{
+    color:#9bc4ff;
+    font-size:.95rem;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.reason{
+    font-size:1.18rem;
+    line-height:1.5;
+}
+
+/* Button */
+
+.button-wrap{
+    text-align:center;
+    margin-top:65px;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    font-size:1.15rem;
+    padding:16px 38px;
+    border-radius:50px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(10px);
+    transition:.35s;
+    box-shadow:0 0 20px rgba(120,170,255,.25);
+}
+
+.button:hover{
+    transform:scale(1.06);
+    box-shadow:0 0 35px rgba(180,220,255,.7);
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    color:#b9c6ff;
+    font-size:.95rem;
+}
+</style>
+
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<h1>18 Reasons Why You're Awesome ✨</h1>
+
+<p class="subtitle">
+Some things deserve to be written down.<br>
+Here are just a few of the reasons you're amazing.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="number">01</div>
+<div class="reason">You're understanding.</div>
+</div>
+
+<div class="card">
+<div class="number">02</div>
+<div class="reason">You're caring.</div>
+</div>
+
+<div class="card">
+<div class="number">03</div>
+<div class="reason">You're very sweet and gentle.</div>
+</div>
+
+<div class="card">
+<div class="number">04</div>
+<div class="reason">You're kind.</div>
+</div>
+
+<div class="card">
+<div class="number">05</div>
+<div class="reason">You're a good blogger.</div>
+</div>
+
+<div class="card">
+<div class="number">06</div>
+<div class="reason">You're a pure soul.</div>
+</div>
+
+<div class="card">
+<div class="number">07</div>
+<div class="reason">You're cool.</div>
+</div>
+
+<div class="card">
+<div class="number">08</div>
+<div class="reason">You know how to play chess.</div>
+</div>
+
+<div class="card">
+<div class="number">09</div>
+<div class="reason">You're smart.</div>
+</div>
+
+<div class="card">
+<div class="number">10</div>
+<div class="reason">You crack funny jokes.</div>
+</div>
+
+<div class="card">
+<div class="number">11</div>
+<div class="reason">You have a great mindset.</div>
+</div>
+
+<div class="card">
+<div class="number">12</div>
+<div class="reason">You are forgiving.</div>
+</div>
+
+<div class="card">
+<div class="number">13</div>
+<div class="reason">You're nice to your parents.</div>
+</div>
+
+<div class="card">
+<div class="number">14</div>
+<div class="reason">You work hard.</div>
+</div>
+
+<div class="card">
+<div class="number">15</div>
+<div class="reason">You have good music taste.</div>
+</div>
+
+<div class="card">
+<div class="number">16</div>
+<div class="reason">You Rock! 🤘</div>
+</div>
+
+<div class="card">
+<div class="number">17</div>
+<div class="reason">You have a friend like me 💀😎</div>
+</div>
+
+<div class="card">
+<div class="number">18</div>
+<div class="reason">You're YOU ❤️</div>
+</div>
+
+</div>
+
+<div class="button-wrap">
+<a class="button" href="jokes.html">
+🎁 One Last Surprise →
+</a>
+</div>
+
+<div class="footer">
+Made with lots of appreciation ✨
+</div>
+
+</div>
+
+<script>
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+const s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+s.style.top=Math.random()*100+"vh";
+
+const size=Math.random()*3+1;
+
+s.style.width=size+"px";
+s.style.height=size+"px";
+
+s.style.animationDuration=(Math.random()*4+2)+"s";
+s.style.animationDelay=(Math.random()*5)+"s";
+
+stars.appendChild(s);
+
+}
+
+</script>
+
+</body>
+</html>
