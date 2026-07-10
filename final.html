@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The End ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    overflow:hidden;
+    font-family:Georgia,serif;
+    background:linear-gradient(to bottom,#020817,#071330,#0b1e44);
+    color:white;
+}
+
+/* Stars */
+
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    background:white;
+    border-radius:50%;
+    animation:twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle{
+0%,100%{
+opacity:.2;
+transform:scale(.8);
+}
+50%{
+opacity:1;
+transform:scale(1.8);
+}
+}
+
+/* Content */
+
+.container{
+    width:min(900px,90%);
+    text-align:center;
+}
+
+.message{
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:22px;
+    padding:45px;
+    box-shadow:0 0 35px rgba(120,170,255,.18);
+
+    opacity:0;
+    transform:translateY(30px);
+
+    animation:appear 2s ease forwards;
+    animation-delay:1s;
+}
+
+.message h1{
+
+    font-size:3rem;
+    margin-bottom:30px;
+
+    text-shadow:0 0 18px rgba(255,255,255,.6);
+
+}
+
+.message p{
+
+    font-size:1.35rem;
+    line-height:2;
+    color:#dbe5ff;
+
+}
+
+@keyframes appear{
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.footer{
+
+margin-top:35px;
+
+opacity:0;
+
+font-style:italic;
+
+color:#9fb7ff;
+
+animation:appear 2s ease forwards;
+
+animation-delay:3.5s;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="container">
+
+<div class="message">
+
+<h1>❤️ The End ❤️</h1>
+
+<p>
+Wow! We are at the end!<br><br>
+
+I am so happy for you yaar and I hope you liked your small gift and most importantly, stay happy alwaysss, I will be rooting for you ❤️
+</p>
+
+</div>
+
+<div class="footer">
+Happy 18th Birthday, Rishit ✨
+</div>
+
+</div>
+
+<script>
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+const star=document.createElement("div");
+
+star.className="star";
+
+const size=Math.random()*3+1;
+
+star.style.width=size+"px";
+star.style.height=size+"px";
+
+star.style.left=Math.random()*100+"vw";
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDuration=(Math.random()*4+2)+"s";
+star.style.animationDelay=(Math.random()*5)+"s";
+
+stars.appendChild(star);
+
+}
+
+</script>
+
+</body>
+</html>
